@@ -9,4 +9,4 @@ GCP_REGION=$(jq -r '.GCP_REGION' ${SCRIPT_DIR}/../ENVIRONMENT_CONFIG.json)
 gcloud storage buckets create gs://${GCP_PROJECT_ID}-data --location=${GCP_REGION}
 
 # Create input folder
-gsutil mkdir gs://${GCP_PROJECT_ID}-data/input
+echo "" | gsutil cp - gs://${GCP_PROJECT_ID}-data/input/.placeholder
