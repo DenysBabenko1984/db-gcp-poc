@@ -1,0 +1,2 @@
+1. Script setup_gcp_environment.sh  is not re-runnable.  Setup of environment could be made with Terraform.
+2. As development environment I used Cloud Shell Console. Because Widows is not a best environment for development and testing of bash scripts.
