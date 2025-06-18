@@ -1,1 +1,2 @@
-ijson
+google-cloud-firestore
+google-cloud-storage

@@ -1,4 +1,5 @@
 {
     "GCP_PROJECT_ID": "db-jetblue-assesment",
-    "GCP_REGION": "us-central1"
+    "GCP_REGION": "us-central1",
+    "FIRESTORE_DATABASE_NAME": "(default)"
 }

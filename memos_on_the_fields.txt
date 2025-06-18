@@ -1,2 +1,5 @@
-1. Script setup_gcp_environment.sh  is not re-runnable.  Setup of environment could be made with Terraform.
+1. Script setup_gcp_environment.sh  is not re-runnable.  Setup of environment could be implemented with Terraform.
 2. As development environment I used Cloud Shell Console. Because Widows is not a best environment for development and testing of bash scripts.
+3. In load_data_gcs_firestore.py  method get_data_from_gcs_ndjson is good from memory usage point of view
+    but for better performance I would try to mount Google storage as network drive and then use "ijson" python library for json loading.
+    It works good with huge json files.
