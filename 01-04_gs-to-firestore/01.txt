@@ -1,1 +1,0 @@
-task implemented in file ...\load_data_gcs_firestore.py

@@ -18,14 +18,13 @@
 gh repo clone DenysBabenko1984/db-gcp-poc
 ```
 4. Update ENVIRONMENT_CONFIG.json file with your GCP project id.
-5. Use `.\00_launchpad\setup_gcp_environment.sh` script for setup GCP Storage bucket.
-
-
+5. Use `.\00_launchpad\setup_gcp_environment.sh` script for setup GCP project.
+Script is not re-runnable.  Setup of environment could be implemented with Terraform.
 
 ## How to work with code
 
-First of all you should authorize on GCP Project
+You should authorize on GCP Project
 
 ```bash
-gcloud auth login
+gcloud auth application-default login 
 ```

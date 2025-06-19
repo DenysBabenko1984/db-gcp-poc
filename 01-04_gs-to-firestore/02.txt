@@ -1,9 +1,0 @@
-task implemented in file ...\load_data_gcs_firestore.py
-
-For optimisation of memory usage during uploading of huge ndjson from GS
-I implemented reading of file by chunks (1Mb each)
-
-It is possible to get better performance with ijson Python library that 
-designed for iteratively parsing JSON data. 
-It useful when dealing with large JSON files.
-But it will require mapping of GS bucket as network drive.

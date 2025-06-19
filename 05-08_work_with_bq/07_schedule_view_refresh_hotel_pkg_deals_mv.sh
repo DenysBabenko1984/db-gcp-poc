@@ -9,9 +9,27 @@
 # Answer > We can use the BigQuery API to schedule a job to refresh the materialized view.
 ##########################################################################################
 
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -e|--environment_name)
+            ENV_NAME="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown parameter passed: $1"
+            exit 1
+            ;;
+    esac
+done
+
+if [ -z "$ENV_NAME" ]; then
+    echo "Usage: $0 -e <environment_name>"
+    exit 1
+fi
+
 # Get the directory where the script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-GCP_PROJECT_ID=$(jq -r '.GCP_PROJECT_ID' ${SCRIPT_DIR}/../ENVIRONMENT_CONFIG.json)
+GCP_PROJECT_ID=$(jq -r --arg env "$ENV_NAME" '.[$env].GCP_PROJECT_ID' ${SCRIPT_DIR}/../ENVIRONMENT_CONFIG.json)
 
 # Create a scheduled query to refresh the materialized view daily
 # Read query from the SQL file
