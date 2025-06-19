@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # We now have the materialized view hotel_pkg_deals_mv. However we must keep in
 #  mind materialized views will not always have their data up to date because they only
 #  contain the data that the google sheet had at the time of materialized view creation. We

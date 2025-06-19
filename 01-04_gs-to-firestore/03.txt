@@ -1,0 +1,11 @@
+implementation in file .../run_load_data_gcs_firestore.sh
+Script read all required configuration from ENVIRONMENT_CONFIG.json
+In this file you can define configurations per environment that 
+will help to reduce amount of errors from user caused by typos
+
+Output and error in:
+.output/output.txt
+.output/error.txt
+
+Execution example:
+./run_load_data_gcs_firestore.sh -e dev

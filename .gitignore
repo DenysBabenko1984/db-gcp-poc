@@ -3,6 +3,7 @@ token.pickle
 ..gitignore.swp
 __pycache__/
 .venv/
+.output/
 .vscode/
 .terraform/
 *.tfstate
