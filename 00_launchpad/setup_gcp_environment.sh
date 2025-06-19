@@ -20,6 +20,7 @@ echo "" | gsutil cp - gs://${GCP_PROJECT_ID}-data/input/.placeholder
 
 # Create firestore (default) database
 gcloud firestore databases create --location=${GCP_REGION} --project=${GCP_PROJECT_ID}
+gcloud firestore databases create --database="failed-records" --location=${GCP_REGION} --project=${GCP_PROJECT_ID}
 
 # Create BQ connection for DataLake
 bq mk --connection --location=${GCP_REGION} --project_id=${GCP_PROJECT_ID} \

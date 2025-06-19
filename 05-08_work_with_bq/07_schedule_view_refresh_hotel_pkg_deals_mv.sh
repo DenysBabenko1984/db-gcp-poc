@@ -14,11 +14,13 @@ GCP_PROJECT_ID=$(jq -r '.GCP_PROJECT_ID' ${SCRIPT_DIR}/../ENVIRONMENT_CONFIG.jso
 # Create a scheduled query to refresh the materialized view daily
 # Read query from the SQL file
 QUERY=$(cat ${SCRIPT_DIR}/06_hotel_pkg_deals_mv.sql)
+# replace \n with space
+QUERY=$(echo "${QUERY}" | tr '\n' ' ')
 # Create JSON params using jq for proper escaping
 PARAMS=$(jq -n --arg query "$QUERY" '{"query": $query}')
 
 bq mk --transfer_config \
-  --target_dataset=hotels_info \
+  --location=us \
   --display_name='refresh_view_hotel_pkg_deals_mv' \
   --params="${PARAMS}" \
   --data_source=scheduled_query \

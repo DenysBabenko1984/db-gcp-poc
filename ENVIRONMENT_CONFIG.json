@@ -1,5 +1,14 @@
 {
-    "GCP_PROJECT_ID": "db-jetblue-assesment",
-    "GCP_REGION": "us-central1",
-    "FIRESTORE_DATABASE_NAME": "(default)"
+    "dev": {
+        "GCP_PROJECT_ID": "db-jetblue-assesment",
+        "GCP_REGION": "us-central1",
+        "TARGET_FIRESTORE_DATABASE_NAME": "(default)",
+        "FAILED_ROWS_FIRESTORE_DATABASE_NAME": "failed-records"
+    },
+    "prod": {
+        "GCP_PROJECT_ID": "<TBD>",
+        "GCP_REGION": "<TBD>",
+        "TARGET_FIRESTORE_DATABASE_NAME": "<TBD>",
+        "FAILED_ROWS_FIRESTORE_DATABASE_NAME": "<TBD>"
+    }
 }

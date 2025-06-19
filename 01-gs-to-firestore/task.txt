@@ -1,9 +1,0 @@
-1. Please write a python script called load_data_gcs_firestore.py that:
-    a. Reads hotel property info from the file located in a google cloud storage bucket
-    b. Transforms the data so that
-        i. it is in json format
-        ii. It contains a field that will allow it to be found and deduplicated
-    c. Loads the data into a firestore collection
-2. Design the script in a way that can support the following situations:
-    a. The script can potentially run in an environment with limited amounts of memory
-    b. The script can scale to handle 100,000 hotel records in one file
